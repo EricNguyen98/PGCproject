@@ -1,18 +1,19 @@
 # PGCproject
-### This is a Web App for INST377
-### This project aims to make the PG County Offices dataset queryable and useable to UMD undergraduates.
-### Application Link: https://pgcgovofficesfinalproject.herokuapp.com/ 
+#### This is a Web App for INST377
+#### This project aims to make the PG County Offices dataset queryable and useable to UMD undergraduates.
+#### Application Link: https://pgcgovofficesfinalproject.herokuapp.com/ 
 
-### Target Browsers: Desktop, (another will be added)
+### Target Browsers: Desktop(Chrome), (another will be added)
 ### User Manual: (to be added)
 ### Developer Manual: (to be added)
 
 
 ## Developer Manual (to be added)
 #### The application has the capability to run locally.
-#### Download the repo to your machine and irun npm install on the folder
+#### Download the repo to your machine and run npm install in the folder
 #### Run the command 'npm start' and the application will run locally on 3000.
-#### server will be using files in the src folder, to change see line 13 in server.js in the main folder. 
+#### Server will be using files in the public folder, to change see line 13 in server.js in the main folder. 
+#### No formal tests have been written 
 ### API: 
 #### GET is used to get all offices and return that to the list and map. Returns all offices in a JSON object un filtered.
 #### PUT is used to populate the list of offices with offices of interest based on agency. Returns a filtered JSON object with office: description, address, city, agency.
@@ -20,4 +21,4 @@
 
 #### Bugs: (to be added)
 
-#### Roadmap: (to be added)
+#### Roadmap: Clean up artifacts in code from development and optimize code. Write tests and improve useablity of app. If more endpoints added, split API rounter to separate file in ser_files folder.

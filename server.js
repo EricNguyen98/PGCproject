@@ -119,9 +119,7 @@ function retrieveAll(res) {
       res.redirect('/error');
     });
 }
-// Syntax change - we don't want to repeat ourselves,
-// or we'll end up with spelling errors in our endpoints.
-//
+
 app
   .route('/api')
   .get((req, res) => {
