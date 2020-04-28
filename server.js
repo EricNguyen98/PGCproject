@@ -10,7 +10,7 @@ const valid = ['HEALTH', 'FIRE', 'PSC', 'DER', 'POLICE', 'SHERIFF', 'COUNTY EXEC
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('src'));
+app.use(express.static('public'));
 
 function processDataForFrontEnd(req, res) {
   const baseURL = 'https://data.princegeorgescountymd.gov/resource/baxv-ntrj.json'; // Enter the URL for the data you would like to retrieve here
