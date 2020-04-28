@@ -1,13 +1,13 @@
 {
   "name": "sample_server",
   "version": "1.0.0",
-  "description": "A sample webserver to pull UMD.io data and push it to a local page",
+  "description": "PG County Office Resource Server",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-  "author": "Alex Leitch",
+  "author": "Eric Nguyen",
   "license": "CC-BY-SA-4.0",
   "dependencies": {
     "express": "^4.17.1",
