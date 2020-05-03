@@ -16,7 +16,9 @@ function getMap(e) {
     .then((data) => data.json()) // note: we didn't send JSON, so there's no JSON to get.
     .then((data) => {
       const aLen = Object.keys(data.agencies).length;
-      // btn.setAttribute("disabled", true);
+      if (data.agencies[0].hasOwnProperty('Error_Message')) {
+        document.querySelector('.officelist').remove();
+      }
       // add list
       const display = document.createElement('ol');
       display.setAttribute('class', 'officelist');
@@ -57,11 +59,11 @@ function sendForm(e) {
     },
     body: JSON.stringify(Object.fromEntries(formToSend)),
   })
-    .then((data) => data.json()) // note: we didn't send JSON, so there's no JSON to get.
+    .then((data) => data.json())
     .then((data) => {
       const aLen = Object.keys(data.agencies).length;
       console.log(data);
-      // btn.setAttribute("disabled", true);
+
       if (document.contains(document.querySelector('.officelist'))) {
         document.querySelector('.officelist').remove();
       }
@@ -69,6 +71,7 @@ function sendForm(e) {
       const display = document.createElement('ol');
       display.setAttribute('class', 'officelist');
       container.appendChild(display);
+
       if (data.agencies[0].hasOwnProperty('Error_Message')) {
         display.append(data.agencies[0].Error_Message);
         display.append(document.createElement('br'));
@@ -96,10 +99,11 @@ function getAll(e) {
   fetch('/api', {
     method: 'GET'
   })
-    .then((data) => data.json()) // note: we didn't send JSON, so there's no JSON to get.
+    .then((data) => data.json())
     .then((data) => {
       const aLen = Object.keys(data.agencies).length;
       const container = document.querySelector('.listcontainer');
+
       if (document.contains(document.querySelector('.officelist'))) {
         document.querySelector('.officelist').remove();
       }
@@ -119,11 +123,7 @@ function getAll(e) {
         agencies.append(br);
         agencies.append(`Address: ${office.human_address}`);
         agencies.append(document.createElement('br'));
-        if (typeof office.agency !== 'undefined') {
-          agencies.append(`Agency: ${office.agency}`);
-        } else {
-          agencies.append('Agency: N/A');
-        }
+        agencies.append(`Agency: ${office.agency}`);
       }
       // btn.setAttribute("disabled", true);
       layerGroup.clearLayers();
