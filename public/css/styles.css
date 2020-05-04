@@ -105,6 +105,7 @@ header {
   text-transform: capitalize;
   flex-flow: row wrap;
   text-align: center;
+  border-radius: 25px;
 }
 
 
@@ -126,16 +127,14 @@ label {
     display: block;
     margin: 6px 0;
 }
-.about, 
-.doc{
-  padding-left: 50px;
-  text-align: left;
+a:link {
+  text-decoration: none;
 }
-
 /*results */
 #mapid{
   height: 480px;
   width: 70%;
+  border-radius: 25px;
 }
 .leaflet-popup-content-wrapper .leaflet-popup-content {
   font-size: 1.3em;
