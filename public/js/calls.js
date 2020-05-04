@@ -22,8 +22,8 @@ function getMap(e) {
       // add list
       const display = document.createElement('ol');
       display.setAttribute('class', 'officelist');
-      container.appendChild(display);
       if (data.agencies[0].hasOwnProperty('Error_Message')) {
+        container.appendChild(display);
         display.append(data.agencies[0].Error_Message);
         display.append(document.createElement('br'));
         display.append(`Here is a list of valid agencies: ${data.agencies[0].Agency}`);
