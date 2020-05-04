@@ -21,6 +21,7 @@ function getMap(e) {
       const display = document.createElement('ol');
       display.setAttribute('class', 'officelist');
       if (data.agencies[0].hasOwnProperty('Error_Message')) {
+        layerGroup.clearLayers();
         if (document.contains(document.querySelector('.officelist'))) {
           document.querySelector('.officelist').remove();
         }
