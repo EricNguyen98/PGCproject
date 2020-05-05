@@ -19,9 +19,10 @@ function processDataForFrontEnd(req, res) {
   const packet = ({ 'agencies': [] });
   if (!valid.includes(agency)) {
     packet.agencies.push({
-      'Error Message': `Sorry we could not find a PG County Office for ${req.body.agency}`,
+      'Error_Message': `Sorry we could not find a PG County Office for ${req.body.agency}`,
       'Agency': valid
     });
+    res.json(packet);
   } else {
     fetch(baseURL)
       .then((r) => r.json())

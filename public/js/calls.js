@@ -15,21 +15,23 @@ function getMap(e) {
   })
     .then((data) => data.json()) // note: we didn't send JSON, so there's no JSON to get.
     .then((data) => {
+      console.log(data.agencies[0].hasOwnProperty('Error_Message'));
       const aLen = Object.keys(data.agencies).length;
-      if (data.agencies[0].hasOwnProperty('Error_Message')) {
-        document.querySelector('.officelist').remove();
-      }
       // add list
       const display = document.createElement('ol');
       display.setAttribute('class', 'officelist');
-      container.appendChild(display);
       if (data.agencies[0].hasOwnProperty('Error_Message')) {
+        layerGroup.clearLayers();
+        if (document.contains(document.querySelector('.officelist'))) {
+          document.querySelector('.officelist').remove();
+        }
+        container.appendChild(display);
         display.append(data.agencies[0].Error_Message);
         display.append(document.createElement('br'));
         display.append(`Here is a list of valid agencies: ${data.agencies[0].Agency}`);
-      } else {
-      // eslint-disable-next-line no-undef
+      } else{
         layerGroup.clearLayers();
+        console.log('run');
         for (let i = 0; i < aLen; i++) {
           longLat[i] = ([data.agencies[i].lat, data.agencies[i].long]);
           name[i] = data.agencies[i].description;

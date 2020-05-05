@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prince George's County Offices Look up Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Prince George's County Offices Look up Tool</h1>
+      <img src="static/images//pgc_icon.png" alt="PG County Seal" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="doc.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="doc">
+        <h2>Documentation</h2>
+        <p>Code and full documentation for this project can be found 
+            at this GitHub Repo:
+        </p>
+        <a href="https://github.com/EricNguyen98/PGCproject">PG County Office Project</a>
+        <h3>Brief Summary</h3>
+        <p>This project makes use of HTML, CSS, JS. A back end is used to 
+            process data from the PG County API and pass it to the front end
+            where it is read as a JSON object and the data is loaded onto the 
+            page. The backend is written in JS and runs in Node.js. The backend
+            supports 3 API calls currently GET is purposed for returning all
+            PG County offices, PUT is used to return offices that match the 
+            agency condition for the map, and POST is used to return offices
+            that match the agency condition for the list. JSON objects are 
+            then parsed frontend to produce the list and map seen.
+        </p>
+    </div>
+  </body>
+</html>
