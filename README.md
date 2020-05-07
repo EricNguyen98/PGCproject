@@ -4,8 +4,8 @@
 #### Application Link: https://pgcgovofficesfinalproject.herokuapp.com/ 
 
 ### Target Browsers: Desktop(Chrome), Mobile
-### User Manual: [Click to goto the User Manual](/docs/user.md)
-### Developer Manual:  [Click to goto the User Manual](#developer-manual)
+### User Manual: [Click to go to the User Manual](/docs/user.md)
+### Developer Manual:  [Click to go to the User Manual](#developer-manual)
 
 
 ## Developer Manual
