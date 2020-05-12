@@ -1,11 +1,11 @@
-# PGCproject
+# Prince George's County Government Offices Resources Project
 #### This is a Web App for INST377
 #### This project aims to make the PG County Offices dataset queryable and useable to UMD undergraduates.
 #### Application Link: https://pgcgovofficesfinalproject.herokuapp.com/ 
 
-### Target Browsers: Desktop(Chrome), Mobile
+### Target Browsers: Desktop(Chrome), Mobile(iOS 11+)
 ### User Manual: [Click to go to the User Manual](/docs/user.md)
-### Developer Manual:  [Click to go to the User Manual](#developer-manual)
+### Developer Manual:  [Click to go to the Developer Manual](#developer-manual)
 
 
 ## Developer Manual
